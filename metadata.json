@@ -1,0 +1,8 @@
+{
+  "name": "TAMYR AI",
+  "description": "Advanced historical & cultural heritage preservation platform using AI. Developed with computer vision, ML degradation models, and dynamic digital twin analytics for Kazakhstan landmarks.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

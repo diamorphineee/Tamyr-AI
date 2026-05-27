@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Set core museum branding colors to elegant light parchment and bronze */
+  --color-brand-sand: #8c765c;
+  --color-brand-clay: #8C6239;
+  --color-brand-stone: #EFECE6;
+  --color-brand-dark: #35261A;
+  --color-brand-gold: #B89047;
+  --color-brand-turquoise: #2A9D90;
+  
+  /* Overwrite default theme fonts */
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Muted elegant analytics overrides matches the soft reference image overlay */
+  --color-cyan-400: #2A9D90;
+  --color-[#00D9FF]: #2A9D90;
+}
+
+/* Custom historical museum classes */
+@layer base {
+  body {
+    background-color: #FAF6F0;
+    color: #35261A;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: "Cinzel", Georgia, serif;
+    letter-spacing: -0.01em;
+    color: #35261A;
+  }
+}
+
+/* Elegant ancient texture / steppes gradients style - changed to light warm beige tone */
+.museum-gradient {
+  background: radial-gradient(circle at 50% 50%, #FAF8F5 0%, #FAF1E6 100%);
+}
+
+.parchment-glow {
+  box-shadow: 0 4px 30px rgba(140, 98, 57, 0.05);
+}
+
+.turquoise-glow {
+  box-shadow: 0 4px 20px rgba(42, 157, 144, 0.08);
+}
+
+.ornamental-border {
+  border-image: linear-gradient(to right, #8C6239, #B89047, #8C6239) 1;
+}
+
+/* Smooth custom styling matching reference image */
+.museum-card {
+  background-color: #FFFFF9;
+  border: 1px solid #EFECE5;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px rgba(140, 98, 57, 0.04);
+}
+
+.sidebar-active-tab {
+  background-color: #EFE8DC;
+  border-right: 4px solid #8C6239;
+  color: #35261A;
+}
+
+.soft-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.soft-scrollbar::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+.soft-scrollbar::-webkit-scrollbar-thumb {
+  background: #EFE8DC;
+  border-radius: 999px;
+}
+
