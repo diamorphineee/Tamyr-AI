@@ -332,10 +332,6 @@ export default function App() {
                         <OrnamentalCorner className="w-12 h-12 text-[#8C6239]/10" />
                       </div>
                       <div className="space-y-3">
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#2A9D90]/10 border border-[#2A9D90]/25 rounded-full text-[10px] font-mono font-bold text-[#2A9D90] uppercase">
-                          <Sparkles size={11} />
-                          {lang === "en" ? "System Core Active" : lang === "kk" ? "Жүйе ядросы белсенді" : "Ядро системы активно"}
-                        </div>
                         <h3 className="text-2xl font-serif font-bold text-[#35261A] tracking-wide leading-tight">
                           {lang === "en" 
                             ? "National AI Archival Platform" 
@@ -744,11 +740,7 @@ export default function App() {
 
             {/* Core Bottom Footer Coordinate Metadata */}
             <footer className="border-t border-[#E8DFC8]/75 pt-5 flex flex-col md:flex-row justify-between items-center text-[9px] font-mono text-[#8C765C] uppercase tracking-widest gap-2">
-              <span>TAMYR HERITAGE ARCHIVE © 2026 // КАЗАХСТАН // ЮНЕСКО-НАСА СОТРУДНИЧЕСТВО</span>
-              <div className="flex items-center gap-1">
-                <KoshkarMuiiz className="w-3.5 h-3.5 text-[#8C6239]/50" />
-                <span>SYSTEM_MODE: ANCIENT HERITAGE PRESERVATION CENTER</span>
-              </div>
+              <span>TAMYR AI 2026 // Казахстан</span>
             </footer>
 
           </main>

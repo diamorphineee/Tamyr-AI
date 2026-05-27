@@ -414,5 +414,236 @@ export const translations: Record<string, Record<Language, string>> = {
     en: "AI Structural Alarm Status",
     kk: "AI құрылымдық дабыл жағдайы",
     ru: "Статус Тревоги Конструкции"
+  },
+
+  // New mathematical model & slider translation keys
+  statisticalCompliance: {
+    en: "STATISTICAL CLIMATE COMPLIANT",
+    kk: "КЛИМАТТЫҚ СТАТИСТИКАҒА СӘЙКЕС",
+    ru: "СООТВЕТСТВУЕТ КЛИМАТИЧЕСКИМ СТАНДАРТАМ"
+  },
+  activeComputationMatrix: {
+    en: "ACTIVE REGIONAL DEGRADATION COMPUTATION MATRIX",
+    kk: "БЕЛСЕНДІ АЙМАҚТЫҚ ТОЗУДЫ ЕСЕПТЕУ МАТРИЦАСЫ",
+    ru: "АКТИВНАЯ МАТРИЦА РАСЧЕТА РЕГИОНАЛЬНОЙ ДЕГРАДАЦИИ"
+  },
+  calcDecayCoef: {
+    en: "Calculated dynamic decay coefficient for",
+    kk: "Келесі нысан үшін есептелген динамикалық тозу коэффициенті:",
+    ru: "Рассчитанный динамический коэффициент распада для"
+  },
+  climateHistoricControls: {
+    en: "CLIMATE HISTORIC CONTROLS",
+    kk: "ТАРИХИ КЛИМАТ КҮЙЛЕРІН БАСҚАРУ",
+    ru: "ИСТОРИЧЕСКИЙ КОНТРОЛЬ КЛИМАТА"
+  },
+  relativeHumidity: {
+    en: "Relative Humidity (H)",
+    kk: "Салыстырмалы ылғалдылық (H)",
+    ru: "Относительная влажность (H)"
+  },
+  annualTempDelta: {
+    en: "Annual Temperature Delta (T)",
+    kk: "Жылдық температуралық ауытқу (T)",
+    ru: "Годовой перепад температур (T)"
+  },
+  solarUv: {
+    en: "Solar UV Radiation (UV)",
+    kk: "Күн ультракүлгін сәулеленуі (UV)",
+    ru: "Солнечная УФ-радиация (UV)"
+  },
+  windAbrVelocity: {
+    en: "Wind Abrasion Velocity (W)",
+    kk: "Желдік үгілу жылдамдығы (W)",
+    ru: "Скорость ветровой абразии (W)"
+  },
+  seismicVib: {
+    en: "Seismic/Ground Vibrations (V)",
+    kk: "Сейсмикалық/Жер қыртысының дірілдері (V)",
+    ru: "Сейсмические/Грунтовые вибрации (V)"
+  },
+  activeCoreVuln: {
+    en: "Active Core Vulnerability (D₀)",
+    kk: "Бастапқы белсенді осалдық (D₀)",
+    ru: "Активная базовая уязвимость (D₀)"
+  },
+  degradation: {
+    en: "DEGRADATION",
+    kk: "ТОЗУ ДЕҢГЕЙІ",
+    ru: "ДЕГРАДАЦИЯ"
+  },
+  riskEnvelope: {
+    en: "RISK ENVELOPE",
+    kk: "ҚАУІП ШЕГІ",
+    ru: "ЗОНА РИСКА"
+  },
+  timelineSimScale: {
+    en: "TIMELINE SIMULATION SCALE",
+    kk: "БОЛЖАУ УАҚЫТЫНЫҢ ШЕГІ",
+    ru: "ШКАЛА МОДЕЛИРОВАНИЯ ВРЕМЕНИ"
+  },
+  yearsForecast: {
+    en: "YEARS FORECAST",
+    kk: "ЖЫЛДАРДЫҢ БОЛЖАМЫ",
+    ru: "ЛЕТ ПРОГНОЗА"
+  },
+  decayIn5: {
+    en: "DECAY IN 5 YRS",
+    kk: "5 ЖЫЛДАҒЫ ТОЗУ",
+    ru: "РАСПАД ЗА 5 ЛЕТ"
+  },
+  decayIn10: {
+    en: "DECAY IN 10 YRS",
+    kk: "10 ЖЫЛДАҒЫ ТОЗУ",
+    ru: "РАСПАД ЗА 10 ЛЕТ"
+  },
+  yearDecay: {
+    en: "YEAR DECAY",
+    kk: "ЖЫЛДЫҚ ТОЗУ",
+    ru: "РАСПАД ЗА ГОД"
+  },
+  estimatedShift: {
+    en: "ESTIMATED SHIFT",
+    kk: "БОЛЖАЛДЫ ӨЗГЕРІС",
+    ru: "ОЖИДАЕМЫЙ СДВИГ"
+  },
+  acuteAttrition: {
+    en: "ACUTE ATTRITION",
+    kk: "ЕЛЕУЛІ ТОЗУ",
+    ru: "ОСТРОЕ ИСТОЩЕНИЕ"
+  },
+  matrixPoint: {
+    en: "MATRIX POINT",
+    kk: "МАТРИЦА НҮКТЕСІ",
+    ru: "ТОЧКА МАТРИЦЫ"
+  },
+  desertMin: {
+    en: "Desert minimum",
+    kk: "Шөлейтті деңгей",
+    ru: "Пустынный минимум"
+  },
+  temperateLabel: {
+    en: "Temperate",
+    kk: "Қоңыржай",
+    ru: "Умеренно"
+  },
+  maxDrop: {
+    en: "max drop",
+    kk: "макс. төмендеу",
+    ru: "макс. перепад"
+  },
+  lowProtection: {
+    en: "Low protection",
+    kk: "Төмен қорғаныс",
+    ru: "Слабая защита"
+  },
+  breeze: {
+    en: "Breeze",
+    kk: "Жеңіл жел",
+    ru: "Бриз"
+  },
+  maxWind: {
+    en: "max wind",
+    kk: "макс. жел күші",
+    ru: "макс. ветер"
+  },
+  inertSoil: {
+    en: "Inert soil",
+    kk: "Инертті топырақ",
+    ru: "Инертный грунт"
+  },
+  background: {
+    en: "background",
+    kk: "фонды",
+    ru: "фоновые"
+  },
+  liveFeed: {
+    en: "LIVE-FEED",
+    kk: "ТІКЕЛЕЙ АРНА",
+    ru: "ПРЯМОЙ КАНАЛ"
+  },
+  
+  // Dualslider Reconstruction view additionals
+  rebuildLabel: {
+    en: "REBUILD",
+    kk: "ҚАЛПЫНА КЕЛТІРУ",
+    ru: "РЕКОНСТРУКЦИЯ"
+  },
+  weatheredLabel: {
+    en: "Weathered",
+    kk: "Бұзылған",
+    ru: "Разрушено"
+  },
+  xmlEraPast: {
+    en: "XI-XII CENTURIES",
+    kk: "XI-XII ҒАСЫРЛАР",
+    ru: "XI-XII ВЕКА"
+  },
+  xmlEraPresent: {
+    en: "PRESENT (MODERNITY)",
+    kk: "БҮГІН (ҚАЗІРГІ СӘТ)",
+    ru: "СОВРЕМЕННОСТЬ"
+  },
+  xmlEraFuture: {
+    en: "FUTURE FORECAST (NO ACTION)",
+    kk: "БОЛАШАҚ БОЛЖАМ (ЕМ СИПАТСЫЗ)",
+    ru: "ПРОГНОЗ БЕЗ МЕР"
+  },
+
+  // Twin additions
+  envLayersLabel: {
+    en: "ENVIRONMENT LAYERS",
+    kk: "ҚОРШАҒАН ОРТА ҚАБАТТАРЫ",
+    ru: "ЭКОЛОГИЧЕСКИЕ СЛОИ"
+  },
+  moistureLabel: {
+    en: "Moisture",
+    kk: "Ылғалдылық",
+    ru: "Влажность"
+  },
+  solarUvLabel: {
+    en: "Solar UV",
+    kk: "Күн ультракүлгіні",
+    ru: "Солнечный УФ"
+  },
+  windTwinLabel: {
+    en: "Wind",
+    kk: "Жел",
+    ru: "Ветер"
+  },
+  seismicLabel: {
+    en: "Seismic",
+    kk: "Сейсмика",
+    ru: "Сейсмика"
+  },
+  reconsSliderLabel: {
+    en: "RECONSTRUCTION SLIDER",
+    kk: "ҚАЛПЫНА КЕЛТІРУ СЛАЙДЕРІ",
+    ru: "СЛАЙДЕР РЕКОНСТРУКЦИИ"
+  },
+  timelineShift: {
+    en: "TIMELINE SHIFT",
+    kk: "УАҚЫТ ШЕГІН ЖЫЛЖЫТУ",
+    ru: "СДВИГ ВО ВРЕМЕНИ"
+  },
+  polygonsHide: {
+    en: "POLYGONS HIDE",
+    kk: "КӨПБҰРЫШТАРДЫ ЖАСЫРУ",
+    ru: "СКРЫТЬ ПОЛИГОНЫ"
+  },
+  wireframeNet: {
+    en: "WIREFRAME NET",
+    kk: "ҚАҢҚАЛЫҚ ТОР",
+    ru: "КАРКАСНАЯ СЕТКА"
+  },
+  cleanUnit: {
+    en: "CLEAN UNIT",
+    kk: "НАТИЖЕНІ ТАЗАРТУ",
+    ru: "ОЧИСТИТЬ ЭКРАН"
+  },
+  lidarScanningStatus: {
+    en: "LIDAR SURFACE SCANNING: NOMINAL",
+    kk: "LIDAR БЕТКІ СКАНЕРЛЕУ: БІРҚАЛЫПТЫ",
+    ru: "LIDAR СКАНИРОВАНИЕ ПОВЕРХНОСТИ: НОРМА"
   }
 };

@@ -208,7 +208,7 @@ export default function AIReconstruction({ lang, landmark }: AIReconstructionPro
         <div className="flex items-center gap-2.5">
           <History className="text-[#8C6239]" size={20} />
           <h2 className="text-lg font-serif font-bold tracking-wide text-[#35261A] uppercase">
-            {t("reconstruction").toUpperCase()} MATRIX COMPARATOR
+            {t("reconstruction").toUpperCase()} {lang === "en" ? "COMPARATOR" : lang === "kk" ? "САЛЫСТЫРУ ТЕХНОЛОГИЯСЫ" : "КОМПАРАТОР"}
           </h2>
         </div>
 
@@ -303,7 +303,7 @@ export default function AIReconstruction({ lang, landmark }: AIReconstructionPro
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5 pt-4 border-t border-[#E8DFC8]/45 bg-black/[0.01] p-4 rounded-2xl">
         <div>
           <span className="text-[10px] text-[#B89047] font-mono font-bold block uppercase mb-1">
-            {t("pastLabel")} (XI-XII ВВ.)
+            {t("pastLabel")} ({t("xmlEraPast")})
           </span>
           <p className="text-[11px] text-[#665445] leading-relaxed font-sans font-medium">
             {landmark.reconstruction.pastDescription[lang]}
@@ -311,7 +311,7 @@ export default function AIReconstruction({ lang, landmark }: AIReconstructionPro
         </div>
         <div>
           <span className="text-[10px] text-[#2A9D90] font-mono font-bold block uppercase mb-1">
-            {t("presentLabel")} (СОВРЕМЕННОСТЬ)
+            {t("presentLabel")} ({t("xmlEraPresent")})
           </span>
           <p className="text-[11px] text-[#665445] leading-relaxed font-sans font-medium">
             {landmark.reconstruction.presentDescription[lang]}
@@ -319,7 +319,7 @@ export default function AIReconstruction({ lang, landmark }: AIReconstructionPro
         </div>
         <div>
           <span className="text-[10px] text-red-655 font-mono font-bold block uppercase mb-1">
-            {t("futureLabel")} (ПРОГНОЗ БЕЗ МЕР)
+            {t("futureLabel")} ({t("xmlEraFuture")})
           </span>
           <p className="text-[11px] text-[#665445] leading-relaxed font-sans font-medium">
             {landmark.reconstruction.futurePredictedDescription[lang]}

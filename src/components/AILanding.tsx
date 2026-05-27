@@ -245,10 +245,7 @@ export default function AILanding({ lang, setLang, onEnterApp, onQuickViewLandma
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-1.5 text-[#2A9D90] text-[10px] font-mono tracking-widest font-extrabold uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#2A9D90] animate-ping" />
-            {t("systemStatus")}
-          </div>
+
         </div>
       </header>
 
@@ -257,16 +254,7 @@ export default function AILanding({ lang, setLang, onEnterApp, onQuickViewLandma
         
         {/* Left Side Content description */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center gap-2 border border-[#8C6239]/20 bg-[#EFE8DC]/40 px-4 py-2 rounded-full shadow-sm">
-            <span className="text-[9px] font-display font-bold tracking-widest text-[#8C6239] uppercase flex items-center gap-1">
-              <Star size={11} className="fill-[#8C6239] text-[#8C6239]" />
-              {lang === "ru"
-                ? "НАЦИОНАЛЬНЫЙ ИИ-ПРОЕКТ ИССЛЕДОВАНИЯ И РЕСТАВРАЦИИ"
-                : lang === "kk"
-                ? "ҰЛТТЫҚ AI ЗЕРТТЕУ ЖӘНЕ РЕСТАВРАЦИЯ ЖОБАСЫ"
-                : "NATIONAL AI RESTORATION & EXPEDITION SYSTEM"}
-            </span>
-          </div>
+
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-wider leading-none uppercase text-[#35261A]">
             <span>{t("appName")}</span>
@@ -436,11 +424,7 @@ export default function AILanding({ lang, setLang, onEnterApp, onQuickViewLandma
 
       {/* Elegant museum feet */}
       <footer className="border-t border-[#E8DFC8]/60 bg-[#FAF1E6] py-5 px-6 flex flex-col sm:flex-row justify-between items-center text-[9px] font-display text-[#8C765C] uppercase tracking-widest gap-2 relative z-10">
-        <span>НАЦИОНАЛЬНЫЙ ИИ-КООРДИНАТОР СОХРАНЕНИЯ НАСЛЕДИЯ КАЗАХСТАНА © 2026</span>
-        <div className="flex items-center gap-1.5 text-[#8C6239]">
-          <span>СОВМЕСТНО С ЮНЕСКО</span>
-          <KoshkarMuiiz className="w-3.5 h-3.5" />
-        </div>
+        <span>TAMYR AI 2026 // Казахстан</span>
       </footer>
 
     </div>

@@ -189,7 +189,7 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
         </div>
         <div className="text-[10px] font-mono text-[#8C765C] flex items-center gap-1 font-bold">
           <ShieldAlert size={12} className="text-[#8C6239]" />
-          <span>STATISTICAL CLIMATE COMPLIANT</span>
+          <span>{t("statisticalCompliance")}</span>
         </div>
       </div>
 
@@ -197,13 +197,13 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
       <div className="bg-[#FAF7F2] border border-[#E8DFC8]/50 p-4 rounded-2xl mb-6 select-all font-mono">
         <div className="text-[10px] text-[#8C6239] text-center tracking-wider leading-relaxed">
           <div className="font-bold border-b border-[#E8DFC8]/40 pb-1.5 mb-1.5 uppercase">
-            ACTIVE REGIONAL DEGRADATION COMPUTATION MATRIX
+            {t("activeComputationMatrix")}
           </div>
           <div className="text-xs font-bold text-[#35261A] my-1">
             k = (H &times; &alpha;) + (T &times; &beta;) + (UV &times; &gamma;) + (W &times; &delta;) + (V &times; &epsilon;)
           </div>
           <div className="text-[9px] text-[#8C765C] mt-1 leading-normal font-semibold">
-            Calculated dynamic decay coefficient for <span className="text-[#8C6239] font-bold">{landmark.name[lang]} ({landmark.climateProfile.city})</span>:<br/>
+            {t("calcDecayCoef")} <span className="text-[#8C6239] font-bold">{landmark.name[lang]} ({landmark.climateProfile.city})</span>:<br/>
             k = ({humidity}% &times; {sens.alpha_h}) + ({tempDelta}°C &times; {sens.beta_t}) + (UV {uvIndex} &times; {sens.gamma_u}) + ({windSpeed}m/s &times; {sens.delta_w}) + ({vibrations}mm/s &times; {sens.epsilon_v}) = <span className="text-[#35261A] font-bold">{kConstant.toFixed(5)} yr⁻¹</span>
           </div>
         </div>
@@ -216,10 +216,10 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
           <div className="flex justify-between items-center pb-1">
             <h4 className="text-[10px] tracking-widest text-[#8C765C] font-mono font-bold uppercase flex items-center gap-1">
               <Sliders size={11} className="text-[#8C6239]" />
-              CLIMATE HISTORIC CONTROLS
+              {t("climateHistoricControls")}
             </h4>
             <span className="text-[9px] font-mono text-[#8C6239] bg-[#8C6239]/5 px-2 py-0.5 rounded-lg border border-[#8C6239]/20 font-bold">
-              LIV-FEED
+              {t("liveFeed")}
             </span>
           </div>
 
@@ -227,7 +227,7 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
             {/* 1. Humidity Slider */}
             <div className="space-y-1">
               <div className="flex justify-between font-mono text-[10px] text-[#8C765C] font-semibold">
-                <span>Relative Humidity (H)</span>
+                <span>{t("relativeHumidity")}</span>
                 <span className="text-[#2A9D90] font-bold">{humidity.toFixed(1)}%</span>
               </div>
               <input
@@ -240,15 +240,15 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
                 className="w-full h-1 bg-[#EFE8DC] rounded-lg appearance-none cursor-pointer accent-[#2A9D90]"
               />
               <div className="flex justify-between text-[8px] font-mono text-gray-550 font-bold">
-                <span>Desert minimum</span>
-                <span>{landmark.climateProfile.city} avg: {landmark.climateProfile.avgHumidity}%</span>
+                <span>{t("desertMin")}</span>
+                <span>{landmark.climateProfile.city} {lang === "en" ? "avg" : lang === "kk" ? "орташа" : "сред."}: {landmark.climateProfile.avgHumidity}%</span>
               </div>
             </div>
 
             {/* 2. Temperature Fluctuations Slider */}
             <div className="space-y-1">
               <div className="flex justify-between font-mono text-[10px] text-[#8C765C] font-semibold">
-                <span>Annual Temperature Delta (T)</span>
+                <span>{t("annualTempDelta")}</span>
                 <span className="text-orange-600 font-bold">{tempDelta.toFixed(1)}°C</span>
               </div>
               <input
@@ -261,15 +261,15 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
                 className="w-full h-1 bg-[#EFE8DC] rounded-lg appearance-none cursor-pointer accent-orange-600"
               />
               <div className="flex justify-between text-[8px] font-mono text-gray-550 font-bold">
-                <span>Temperate</span>
-                <span>{landmark.climateProfile.city} max drop: {landmark.climateProfile.avgTempDelta}°C</span>
+                <span>{t("temperateLabel")}</span>
+                <span>{landmark.climateProfile.city} {t("maxDrop")}: {landmark.climateProfile.avgTempDelta}°C</span>
               </div>
             </div>
 
             {/* 3. Solar UV Exposure index slider */}
             <div className="space-y-1">
               <div className="flex justify-between font-mono text-[10px] text-[#8C765C] font-semibold">
-                <span>Solar UV Radiation (UV)</span>
+                <span>{t("solarUv")}</span>
                 <span className="text-amber-600 font-bold font-semibold">Index {uvIndex.toFixed(1)}</span>
               </div>
               <input
@@ -282,7 +282,7 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
                 className="w-full h-1 bg-[#EFE8DC] rounded-lg appearance-none cursor-pointer accent-amber-600"
               />
               <div className="flex justify-between text-[8px] font-mono text-gray-550 font-bold">
-                <span>Low protection</span>
+                <span>{t("lowProtection")}</span>
                 <span>{landmark.climateProfile.city} uv: {landmark.climateProfile.avgUvIndex}</span>
               </div>
             </div>
@@ -290,7 +290,7 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
             {/* 4. Wind velocity abrasion speed */}
             <div className="space-y-1">
               <div className="flex justify-between font-mono text-[10px] text-[#8C765C] font-semibold">
-                <span>Wind Abrasion Velocity (W)</span>
+                <span>{t("windAbrVelocity")}</span>
                 <span className="text-slate-600 font-bold">{windSpeed.toFixed(1)} m/s</span>
               </div>
               <input
@@ -303,15 +303,15 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
                 className="w-full h-1 bg-[#EFE8DC] rounded-lg appearance-none cursor-pointer accent-slate-500"
               />
               <div className="flex justify-between text-[8px] font-mono text-gray-555 font-bold">
-                <span>Breeze</span>
-                <span>{landmark.climateProfile.city} max wind: {landmark.climateProfile.avgWindSpeed} m/s</span>
+                <span>{t("breeze")}</span>
+                <span>{landmark.climateProfile.city} {t("maxWind")}: {landmark.climateProfile.avgWindSpeed} m/s</span>
               </div>
             </div>
 
             {/* 5. Seismic/Traffic vibrations */}
             <div className="space-y-1 font-sans">
               <div className="flex justify-between font-mono text-[10px] text-[#8C765C] font-semibold">
-                <span>Seismic/Ground Vibrations (V)</span>
+                <span>{t("seismicVib")}</span>
                 <span className="text-red-600 font-bold">{vibrations.toFixed(2)} mm/s</span>
               </div>
               <input
@@ -324,15 +324,15 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
                 className="w-full h-1 bg-[#EFE8DC] rounded-lg appearance-none cursor-pointer accent-red-600"
               />
               <div className="flex justify-between text-[8px] font-mono text-gray-555 font-bold">
-                <span>Inert soil</span>
-                <span>{landmark.climateProfile.city} background: {landmark.climateProfile.seismicVibrations} mm/s</span>
+                <span>{t("inertSoil")}</span>
+                <span>{landmark.climateProfile.city} {t("background")}: {landmark.climateProfile.seismicVibrations} mm/s</span>
               </div>
             </div>
 
             {/* Base physical erosion D0 */}
             <div className="space-y-1 font-sans border-t border-[#E8DFC8]/40 pt-3">
               <div className="flex justify-between font-mono text-[10px] text-[#8C765C] font-bold">
-                <span>Active Core Vulnerability (D₀)</span>
+                <span>{t("activeCoreVuln")}</span>
                 <span className="text-[#8C6239] font-bold">{baseErosion.toFixed(1)}%</span>
               </div>
               <input
@@ -358,9 +358,9 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
               </span>
               <div className="flex items-center gap-2 text-[9px] font-mono text-[#8C765C] font-bold">
                 <span className="inline-block w-2.5 h-1 bg-[#8C6239] rounded" />
-                <span>DEGRADATION</span>
-                <span className="inline-block w-2.5 h-1 bg-amber-600 border-dashed border-b" />
-                <span>RISK ENVELOPE</span>
+                <span>{t("degradation")}</span>
+                <span className="inline-block w-2.5 h-1 bg-[#D4AF37] border-dashed border-b" />
+                <span>{t("riskEnvelope")}</span>
               </div>
             </div>
 
@@ -427,9 +427,9 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
           <div className="bg-[#FAF7F2] border border-[#E8DFC8]/50 p-4 rounded-2xl">
             <div className="mb-2 flex justify-between items-center text-xs">
               <span className="text-[10px] text-[#8C765C] font-mono block uppercase tracking-wider font-bold">
-                TIMELINE SIMULATION SCALE
+                {t("timelineSimScale")}
               </span>
-              <span className="font-mono font-bold text-[#8C6239]">{focusYears} YEARS FORECAST</span>
+              <span className="font-mono font-bold text-[#8C6239]">{focusYears} {t("yearsForecast")}</span>
             </div>
             
             <input
@@ -444,32 +444,32 @@ export default function PredictiveAnalytics({ lang, landmark }: PredictiveAnalyt
             <div className="grid grid-cols-3 gap-3 mt-4 text-xs font-sans">
               <div className="bg-[#FFFFFC] border border-[#E8DFC8]/60 p-3 rounded-2xl text-center shadow-sm">
                 <span className="text-[9px] text-[#8C765C] font-mono block uppercase font-bold">
-                  DECAY IN 5 YRS
+                  {t("decayIn5")}
                 </span>
                 <span className="text-lg font-bold text-[#8C6239] font-mono block mt-1">
                   +{decay5Years}%
                 </span>
-                <span className="text-[8px] text-gray-500 font-mono uppercase block mt-0.5 font-bold">ESTIMATED SHIFT</span>
+                <span className="text-[8px] text-gray-500 font-mono uppercase block mt-0.5 font-bold">{t("estimatedShift")}</span>
               </div>
 
               <div className="bg-[#FFFFFC] border border-[#E8DFC8]/60 p-3 rounded-2xl text-center shadow-sm">
                 <span className="text-[9px] text-[#8C765C] font-mono block uppercase font-bold">
-                  DECAY IN 10 YRS
+                  {t("decayIn10")}
                 </span>
                 <span className="text-lg font-bold text-amber-600 font-mono block mt-1">
                   +{decay10Years}%
                 </span>
-                <span className="text-[8px] text-gray-500 font-mono uppercase block mt-0.5 font-bold">ACUTE ATTRITION</span>
+                <span className="text-[8px] text-gray-500 font-mono uppercase block mt-0.5 font-bold">{t("acuteAttrition")}</span>
               </div>
 
               <div className="bg-[#8C6239]/5 border border-[#8C6239]/30 p-3 rounded-2xl text-center shadow-sm">
                 <span className="text-[9px] text-[#8C6239] font-mono block uppercase font-extrabold">
-                  YEAR {focusYears} DECAY
+                  {lang === "en" ? `YEAR ${focusYears} DECAY` : lang === "kk" ? `${focusYears} ЖЫЛДАҒЫ ТОЗУ` : `РАСПАД НА ${focusYears} ГОД`}
                 </span>
                 <span className="text-lg font-bold text-[#35261A] font-mono block mt-1">
                   +{decaySelectedYears}%
                 </span>
-                <span className="text-[8px] text-[#8C6239] font-mono uppercase block mt-0.5 font-bold">MATRIX POINT</span>
+                <span className="text-[8px] text-[#8C6239] font-mono uppercase block mt-0.5 font-bold">{t("matrixPoint")}</span>
               </div>
             </div>
           </div>

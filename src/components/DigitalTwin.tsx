@@ -816,7 +816,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
           {/* Bottom active scanning laser beam overlay indicator */}
           <div className="absolute bottom-3 inset-x-4 pointer-events-none flex justify-between text-[8px] font-mono text-[#8C765C] font-bold">
             <span>ZOOM: {Math.round(zoom * 100)}%</span>
-            <span className="text-[#2A9D90] animate-pulse font-bold">LIDAR SURFACE SCANNING: NOMINAL</span>
+            <span className="text-[#2A9D90] animate-pulse font-bold">{t("lidarScanningStatus")}</span>
           </div>
         </div>
 
@@ -824,7 +824,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
         <div className="lg:col-span-1 bg-[#FAF7F2] border border-[#E8DFC8]/50 p-4 rounded-2xl flex flex-col justify-between space-y-4">
           <div>
             <div className="text-[9px] text-[#8C6239] font-mono font-bold tracking-widest border-b border-[#E8DFC8]/55 pb-1.5 mb-2.5 uppercase">
-              ENVIRONMENT LAYERS
+              {t("envLayersLabel")}
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-[10px] font-mono">
@@ -837,7 +837,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
                 }`}
               >
                 <Droplet size={11} />
-                Moisture
+                {t("moistureLabel")}
               </button>
 
               <button
@@ -849,7 +849,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
                 }`}
               >
                 <Sun size={11} />
-                Solar UV
+                {t("solarUvLabel")}
               </button>
 
               <button
@@ -861,7 +861,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
                 }`}
               >
                 <Wind size={11} />
-                Wind
+                {t("windTwinLabel")}
               </button>
 
               <button
@@ -873,14 +873,14 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
                 }`}
               >
                 <Activity size={11} />
-                Seismic
+                {t("seismicLabel")}
               </button>
             </div>
           </div>
 
           <div className="space-y-3">
             <span className="text-[9px] text-[#8C765C] font-mono font-bold tracking-wider block uppercase">
-              RECONSTRUCTION SLIDER
+              {t("reconsSliderLabel")}
             </span>
             <input
               type="range"
@@ -891,14 +891,14 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
               className="w-full h-1 bg-[#EFE8DC] rounded appearance-none cursor-pointer accent-[#8C6239]"
             />
             <div className="flex justify-between font-mono text-[9px] text-[#8C765C] uppercase font-bold">
-              <span>Weathered (0%)</span>
-              <span className="text-[#8C6239] font-bold">REBUILD: {restorationProgress}%</span>
+              <span>{t("weatheredLabel")} (0%)</span>
+              <span className="text-[#8C6239] font-bold">{t("rebuildLabel")}: {restorationProgress}%</span>
             </div>
           </div>
 
           <div>
             <div className="text-[9px] text-[#8C6239] font-mono font-bold tracking-widest border-b border-[#E8DFC8]/55 pb-1.5 mb-2.5 uppercase">
-              TIMELINE SHIFT
+              {t("timelineShift")}
             </div>
 
             <div className="grid grid-cols-3 gap-1.5 text-[9px] font-mono">
@@ -910,7 +910,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
                     : "bg-[#FFFFFC] border-[#E8DFC8]/60 text-[#8C765C] hover:text-[#35261A]"
                 }`}
               >
-                Past
+                {t("pastLabel")}
               </button>
 
               <button
@@ -919,7 +919,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
                   timelineMode === "present" ? "bg-[#2A9D90] border-[#2A9D90] text-white" : "bg-[#FFFFFC] border-[#E8DFC8]/60 text-[#8C765C] hover:text-[#35261A]"
                 }`}
               >
-                Present
+                {t("presentLabel")}
               </button>
 
               <button
@@ -930,7 +930,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
                     : "bg-[#FFFFFC] border-[#E8DFC8]/60 text-[#8C765C] hover:text-[#35261A]"
                 }`}
               >
-                Future
+                {t("futureLabel")}
               </button>
             </div>
           </div>
@@ -950,7 +950,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
             }`}
           >
             <Eye size={12} />
-            {showWireframe ? "POLYGONS HIDE" : "WIREFRAME NET"}
+            {showWireframe ? t("polygonsHide") : t("wireframeNet")}
           </button>
 
           <button
