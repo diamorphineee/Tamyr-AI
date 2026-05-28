@@ -645,5 +645,115 @@ export const translations: Record<string, Record<Language, string>> = {
     en: "LIDAR SURFACE SCANNING: NOMINAL",
     kk: "LIDAR БЕТКІ СКАНЕРЛЕУ: БІРҚАЛЫПТЫ",
     ru: "LIDAR СКАНИРОВАНИЕ ПОВЕРХНОСТИ: НОРМА"
+  },
+  lidarStructuralMetrics: {
+    en: "LIDAR STRUCTURAL METRICS",
+    kk: "LIDAR ҚҰРЫЛЫМДЫҚ МЕТРИКАЛАРЫ",
+    ru: "СТРУКТУРНЫЕ МЕТРИКИ LIDAR"
+  },
+  surfaceErosionIndex: {
+    en: "SURFACE EROSION INDEX",
+    kk: "БЕТКІ ЭРОЗИЯ КӨРСЕТКІШІ",
+    ru: "ИНДЕКС ЭРОЗИИ ПОВЕРХНОСТИ"
+  },
+  crackShiftGrowthRatio: {
+    en: "CRACK SHIFT GROWTH RATIO",
+    kk: "ЖАРЫҚ ТРАЕКТОРИЯСЫНЫҢ ӨСУ КӨРСЕТКІШІ",
+    ru: "СКОРОСТЬ РАСШИРЕНИЯ ТРЕЩИН"
+  },
+  moistureRefractionDamp: {
+    en: "MOISTURE REFRACTION DAMP",
+    kk: "ЫЛҒАЛДЫҢ СІҢУ ДӘРЕЖЕСІ",
+    ru: "СТЕПЕНЬ ВЛАЖНОСТНОГО НАСЫЩЕНИЯ"
+  },
+  structuralStressBounds: {
+    en: "STRUCTURAL STRESS BOUNDS",
+    kk: "ҚҰРЫЛЫМДЫҚ ШЕКТІ КҮШТЕМЕ",
+    ru: "ПРЕДЕЛЫ СТРУКТУРНОГО НАПРЯЖЕНИЯ"
+  },
+  tamyrPlatformConfiguration: {
+    en: "TAMYR PLATFORM CONFIGURATION",
+    kk: "ТАМЫР ПЛАТФОРМА СИПАТТАМАЛАРЫ",
+    ru: "КОНФИГУРАЦИЯ ПЛАТФОРМЫ ТАМЫР"
+  },
+  systemSimulationSettings: {
+    en: "System Simulation Settings",
+    kk: "Жүйені модельдеу күйлері",
+    ru: "Настройки Симуляции Системы"
+  },
+  riskWeightCoefficients: {
+    en: "Risk Weight Coefficients",
+    kk: "Қауіп коэффиценттері",
+    ru: "Коэффициенты веса факторов риска"
+  },
+  customizeWeightCalibrations: {
+    en: "Customize weight calibrations contributing to the composite risk alarm scores across high-precision climate models.",
+    kk: "Дәлдігі жоғары климаттық модельдер бойынша қауіптің аралас дабыл бағаларына әсер ететін салмақты калибрлеуді бейімдеу.",
+    ru: "Настройка весовых коэффициентов деградации, влияющих на общий уровень риска в высокоточных климатических моделях."
+  },
+  moisturePenetrationWeight: {
+    en: "Moisture Penetration Weight",
+    kk: "Ылғалдың сіңу салмағы",
+    ru: "Вес Влажностного Проникновения"
+  },
+  seismicVibrationStressWeight: {
+    en: "Seismic / Vibration Stress Weight",
+    kk: "Сейсмикалық / Діріл жүктемесінің салмағы",
+    ru: "Вес Сейсмической / Вибрационной Нагрузки"
+  },
+  environmentalHumidityWeight: {
+    en: "Environmental Humidity Weight",
+    kk: "Қоршаған орта ылғалдылық салмағы",
+    ru: "Вес Влажности Окружающей Среды"
+  },
+  temperatureStressWeight: {
+    en: "Temperature Stress Weight",
+    kk: "Температуралық күйзеліс салмағы",
+    ru: "Вес Температурного Напряжения"
+  },
+  platformIntegrationDiagnostics: {
+    en: "Platform Integration Diagnostics",
+    kk: "Платформа диагностикасы",
+    ru: "Диагностические Панели"
+  },
+  restEngineStatus: {
+    en: "REST Engine Status:",
+    kk: "REST қозғалтқышының күйі:",
+    ru: "Статус REST Модуля:"
+  },
+  onlineOperational: {
+    en: "ONLINE OPERATIONAL",
+    kk: "ЖҰМЫС ІСТЕП ТҰР",
+    ru: "АКТИВЕН / РАБОТАЕТ"
+  },
+  geminiIntegration: {
+    en: "Gemini Integration:",
+    kk: "Gemini интеграциясы:",
+    ru: "Интеграция с Gemini:"
+  },
+  nasaLidarCoordinates: {
+    en: "NASA LIDAR coordinates:",
+    kk: "NASA LIDAR координаттары:",
+    ru: "NASA LIDAR Координаты:"
+  },
+  wgs84Calibrated: {
+    en: "WGS84 calibrated",
+    kk: "WGS84 калибрленген",
+    ru: "WGS84 откалибровано"
+  },
+  unescoCriteriaStatus: {
+    en: "UNESCO Criteria Status:",
+    kk: "ЮНЕСКО өлшемшарттарының күйі:",
+    ru: "Статус Критериев ЮНЕСКО:"
+  },
+  categoryIiCompliant: {
+    en: "Category-II Compliant",
+    kk: "II санатқа сәйкес",
+    ru: "Соответствует II Категории"
+  },
+  reInitializeHeritageCoefficients: {
+    en: "RE-INITIALIZE HERITAGE COEFFICIENTS",
+    kk: "МҰРА КОЭФФИЦИЕНТТЕРІН ҚАЙТА ҚОРЫТЫНДЫЛАУ",
+    ru: "СБРОСИТЬ И ПЕРЕКАЛИБРОВАТЬ КОЭФФИЦИЕНТЫ"
   }
 };

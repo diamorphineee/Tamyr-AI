@@ -173,7 +173,7 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
     let vertices: Point3D[] = [];
     let faces: Face3D[] = [];
 
-    const modelScale = 115 * zoom;
+    const modelScale = 180 * zoom;
 
     if (landmark.id === "yasawi") {
       // 1. KHOJA AHMED YASAWI MAUSOLEUM SOLID 3D MODEL
@@ -775,21 +775,10 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
             </div>
           </div>
 
-          {/* Active selected zone detailed scientific readouts */}
-          {selectedZone && (
-            <div className="bg-[#FFFFFC] border border-[#E8DFC8]/40 p-2.5 rounded-xl font-mono text-[9px] text-[#8C765C] space-y-1">
-              <span className="text-[#8C6239] font-bold block uppercase border-b border-[#EBE3D3] pb-1 mb-1">
-                PROBE_LOGS_{selectedZoneIdx + 1}
-              </span>
-              <div>SPEC_INDEX: <span className="text-[#35261A] font-semibold">FEA_Z_{selectedZoneIdx * 3 + 12}</span></div>
-              <div>STRESS_COEF: <span className="text-[#35261A] font-semibold">{selectedZone.stress}</span></div>
-              <div>DESCRIPTION: <span className="text-[#665445] italic font-semibold">{selectedZone.condition}</span></div>
-            </div>
-          )}
         </div>
 
         {/* Center: The main 3D canvas stage */}
-        <div className="lg:col-span-2 min-h-[300px] bg-[#FAF7F2] border border-[#E8DFC8]/60 rounded-2xl relative overflow-hidden group">
+        <div className="lg:col-span-2 min-h-[460px] md:min-h-[500px] bg-[#FAF7F2] border border-[#E8DFC8]/60 rounded-2xl relative overflow-hidden group">
           {/* Angle and calibration trackers */}
           <div className="absolute top-3 left-4 text-[8px] font-mono text-[#8C765C] space-y-0.5 pointer-events-none font-bold">
             <div>3D_AZIMUTH: {((angleY * 180 / Math.PI) % 360).toFixed(1)}°</div>
@@ -804,9 +793,9 @@ export default function DigitalTwin({ lang, landmark }: DigitalTwinProps) {
 
           <canvas
             ref={canvasRef}
-            width={440}
-            height={320}
-            className="w-full h-full cursor-grab active:cursor-grabbing max-h-[360px]"
+            width={720}
+            height={480}
+            className="w-full h-full cursor-grab active:cursor-grabbing max-h-[520px]"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}

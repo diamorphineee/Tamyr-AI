@@ -585,24 +585,24 @@ export default function App() {
                     
                     <div className="space-y-4">
                       <span className="text-[9px] text-[#2A9D90] font-mono font-bold tracking-widest uppercase block border-b border-[#E8DFC8]/45 pb-2 mb-3">
-                        LIDAR STRUCTURAL METRICS
+                        {t("lidarStructuralMetrics")}
                       </span>
                       
                       <div className="space-y-4 text-xs font-sans">
                         <div className="p-3 bg-[#FAF7F2] border border-[#EFE8DC] rounded-xl">
-                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">SURFACE EROSION INDEX</span>
+                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">{t("surfaceErosionIndex")}</span>
                           <span className="font-bold text-[#35261A] text-lg block mt-0.5">{selectedLandmark.metrics.surfaceErosion}%</span>
                         </div>
                         <div className="p-3 bg-[#FAF7F2] border border-[#EFE8DC] rounded-xl">
-                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">CRACK SHIFT GROWTH RATIO</span>
+                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">{t("crackShiftGrowthRatio")}</span>
                           <span className="font-bold text-[#35261A] text-lg block mt-0.5">{selectedLandmark.metrics.crackGrowthRate} mm/year</span>
                         </div>
                         <div className="p-3 bg-[#FAF7F2] border border-[#EFE8DC] rounded-xl">
-                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">MOISTURE REFRACTION DAMP</span>
+                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">{t("moistureRefractionDamp")}</span>
                           <span className="font-bold text-[#35261A] text-lg block mt-0.5">{selectedLandmark.metrics.moisturePenetration}%</span>
                         </div>
                         <div className="p-3 bg-[#FAF7F2] border border-[#EFE8DC] rounded-xl">
-                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">STRUCTURAL STRESS BOUNDS</span>
+                          <span className="text-[#8C765C] text-[9px] uppercase tracking-wider block font-mono">{t("structuralStressBounds")}</span>
                           <span className="text-[#8C6239] font-bold text-lg block mt-0.5">{selectedLandmark.metrics.structuralStress} MPa</span>
                         </div>
                       </div>
@@ -630,10 +630,10 @@ export default function App() {
                   {/* Header Title */}
                   <div className="border-b border-[#E8DFC8]/45 pb-4">
                     <span className="text-[10px] text-[#2A9D90] font-mono font-bold tracking-widest block uppercase">
-                      TAMYR PLATFORM CONFIGURATION
+                      {t("tamyrPlatformConfiguration")}
                     </span>
                     <h3 className="text-xl font-serif font-bold text-[#35261A] mt-0.5">
-                      System Simulation Settings
+                      {t("systemSimulationSettings")}
                     </h3>
                   </div>
 
@@ -644,16 +644,16 @@ export default function App() {
                     <div className="space-y-4">
                       <h4 className="font-serif font-bold text-sm text-[#35261A] flex items-center gap-2">
                         <Activity size={14} className="text-[#8C6239]" />
-                        {lang === "en" ? "Risk Weight Coefficients" : lang === "kk" ? "Қауіп коэффиценттері" : "Коэффициенты веса факторов риска"}
+                        {t("riskWeightCoefficients")}
                       </h4>
                       <p className="text-[#665445] text-[11px] leading-relaxed">
-                        Customize weight calibrations contributing to the composite risk alarm scores across high-precision climate models.
+                        {t("customizeWeightCalibrations")}
                       </p>
                       
                       <div className="space-y-3">
                         <div>
                           <div className="flex justify-between text-[11px] text-[#665445] mb-1">
-                            <span>Moisture Penetration Weight</span>
+                            <span>{t("moisturePenetrationWeight")}</span>
                             <span className="font-semibold text-[#35261A]">40% (0.4)</span>
                           </div>
                           <div className="w-full bg-[#EFE8DC] h-1.5 rounded-full overflow-hidden">
@@ -663,7 +663,7 @@ export default function App() {
 
                         <div>
                           <div className="flex justify-between text-[11px] text-[#665445] mb-1">
-                            <span>Seismic / Vibration Stress Weight</span>
+                            <span>{t("seismicVibrationStressWeight")}</span>
                             <span className="font-semibold text-[#35261A]">30% (0.3)</span>
                           </div>
                           <div className="w-full bg-[#EFE8DC] h-1.5 rounded-full overflow-hidden">
@@ -673,7 +673,7 @@ export default function App() {
 
                         <div>
                           <div className="flex justify-between text-[11px] text-[#665445] mb-1">
-                            <span>Environmental Humidity Weight</span>
+                            <span>{t("environmentalHumidityWeight")}</span>
                             <span className="font-semibold text-[#35261A]">20% (0.2)</span>
                           </div>
                           <div className="w-full bg-[#EFE8DC] h-1.5 rounded-full overflow-hidden">
@@ -683,7 +683,7 @@ export default function App() {
 
                         <div>
                           <div className="flex justify-between text-[11px] text-[#665445] mb-1">
-                            <span>Temperature Stress Weight</span>
+                            <span>{t("temperatureStressWeight")}</span>
                             <span className="font-semibold text-[#35261A]">10% (0.1)</span>
                           </div>
                           <div className="w-full bg-[#EFE8DC] h-1.5 rounded-full overflow-hidden">
@@ -697,25 +697,25 @@ export default function App() {
                     <div className="space-y-4">
                       <h4 className="font-serif font-bold text-sm text-[#35261A] flex items-center gap-2">
                         <Globe size={14} className="text-[#2A9D90]" />
-                        {lang === "en" ? "Platform Integration Diagnostics" : lang === "kk" ? "Платформа диагностикасы" : "Диагностические Панели"}
+                        {t("platformIntegrationDiagnostics")}
                       </h4>
                       
                       <div className="bg-[#FAF7F2] border border-[#EFE8DC] rounded-2xl p-4.5 space-y-3">
                         <div className="flex justify-between border-b border-[#E8DFC8] pb-2">
-                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">REST Engine Status:</span>
-                          <span className="text-[10px] font-mono font-bold text-teal-600 uppercase">ONLINE OPERATIONAL</span>
+                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">{t("restEngineStatus")}</span>
+                          <span className="text-[10px] font-mono font-bold text-teal-600 uppercase">{t("onlineOperational")}</span>
                         </div>
                         <div className="flex justify-between border-b border-[#E8DFC8] pb-2">
-                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">Gemini Integration:</span>
+                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">{t("geminiIntegration")}</span>
                           <span className="text-[10px] font-mono font-bold text-[#8C6239] uppercase">gemini-3.5-flash AI</span>
                         </div>
                         <div className="flex justify-between border-b border-[#E8DFC8] pb-2">
-                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">NASA LIDAR coordinates:</span>
-                          <span className="text-[10px] font-mono text-[#35261A]">WGS84 calibrated</span>
+                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">{t("nasaLidarCoordinates")}</span>
+                          <span className="text-[10px] font-mono text-[#35261A]">{t("wgs84Calibrated")}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">UNESCO Criteria Status:</span>
-                          <span className="text-[10px] font-mono text-[#35261A] font-bold">Category-II Compliant</span>
+                          <span className="text-[#8C765C] text-[10px] uppercase font-mono">{t("unescoCriteriaStatus")}</span>
+                          <span className="text-[10px] font-mono text-[#35261A] font-bold">{t("categoryIiCompliant")}</span>
                         </div>
                       </div>
 
@@ -727,7 +727,7 @@ export default function App() {
                         }}
                         className="w-full py-3 bg-[#8C6239] hover:bg-amber-950 text-white font-semibold text-[10px] tracking-widest uppercase rounded-xl transition-all shadow-sm"
                       >
-                        RE-INITIALIZE HERITAGE COEFFICIENTS
+                        {t("reInitializeHeritageCoefficients")}
                       </button>
                     </div>
 
